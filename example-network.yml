@@ -1,0 +1,14 @@
+---
+- hosts: targets
+  vars:
+    network_connections:
+      - name: eth0
+        type: ethernet
+        ip:
+          dns:
+            - 192.168.122.1
+          dns_search:
+            - example.com
+            - test.example.com
+  roles:
+    - rhel-system-roles.network
