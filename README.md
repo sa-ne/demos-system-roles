@@ -10,4 +10,5 @@ Supported (as of Oct 2018)
 * Timesync
 
 [Overview](https://access.redhat.com/articles/3050101)
+
 [Galaxy Roles READMEs](https://galaxy.ansible.com/linux-system-roles)
