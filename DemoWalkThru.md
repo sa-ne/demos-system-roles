@@ -18,7 +18,7 @@
 * Network
   * Setup: Check connection name and substitute for 'eth0' below and edit playbook accordingly
   * Pre-check: ```nmcli con show eth0 | grep dns```
-  * Run playbook ```example-network.yml``` to get DNS servers and domain search
+  * Run playbook ```example-network.yml``` to set DNS servers and domain search
   * Validation: ```nmcli con show eth0 | grep dns```
   * Cleanup: ```nmcli con mod eth0 ipv4.dns "" ipv4.dns-search""```
 * SELinux
@@ -27,8 +27,8 @@
   * Run playbook ```example-selinux.yml``` to set SELinux to ON and ENFORCING
   * Validation: ```sestatus```
 * Timesync
-  * Setup: Copy original file if cleanup is needed
-  * Pre-check: cat /etc/chrony.conf
+  * Setup: Copy original conf file if cleanup is needed
+  * Pre-check: ```grep -e ^server /etc/chrony.conf```
   * Run playbook ```example-timesync.yml``` to set NTP servers
-  * Validation: cat /etc/chrony.conf to see changes
-  * Cleanup: Copy original conf file to /etc/
+  * Validation: ```grep -e ^server /etc/chrony.conf``` to see changes
+  * Cleanup: Copy original conf file back to /etc/
