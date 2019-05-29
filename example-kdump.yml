@@ -1,0 +1,6 @@
+---
+- hosts: targets
+  vars:
+    kdump_path: /var/crash
+  roles:
+    - rhel-system-roles.kdump
