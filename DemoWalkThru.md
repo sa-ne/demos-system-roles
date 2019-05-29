@@ -1,13 +1,13 @@
-# System Roles Demo WalkThru
+## System Roles Demo WalkThru
 
-## Requirements
+### Requirements
 * Minimum VM: 1vCPU x 1GB mem, running RHEL 7
 * Multiple VMs can be used as targets for ansible inventory
 
-## WalkThru:
+### WalkThru:
 * Installation, this occurs on the control node only.  It need not be installed on target nodes.
 ```
-# yum --enablerepo=rhel-7-server-extras-rpms --enablerepo=rhel-7-server-ansible-2-rpms install rhel-system-roles ansible
+      # yum --enablerepo=rhel-7-server-extras-rpms --enablerepo=rhel-7-server-ansible-2-rpms install rhel-system-roles ansible
 ```
 * On the control node, create/edit ```/etc/ansible/hosts``` with the target host(s)
   * Or create an alternate inventory file and pass via ```-i``` cmdline argument
