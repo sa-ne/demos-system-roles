@@ -1,7 +1,7 @@
 ## System Roles Demo WalkThru
 
 ### Requirements
-* Minimum VM: 1vCPU x 1GB mem, running RHEL 7 or RHEL 8
+* Minimum VM: 1vCPU x 1GB mem, running RHEL 7.latest or RHEL 8.latest
 * Multiple VMs can be used as targets for ansible inventory
 
 ### WalkThru:
@@ -10,7 +10,8 @@
 ```
       # yum --enablerepo=rhel-7-server-extras-rpms --enablerepo=rhel-7-server-ansible-2-rpms install rhel-system-roles ansible
 ```
-    * RHEL 8 Installation:
+    
+   * RHEL 8 Installation:
 ```
       # yum --enablerepo=ansible-2-for-rhel-8-x86_64-rpms install rhel-system-roles ansible
 ```
